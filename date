@@ -1,0 +1,10 @@
+from datetime import date, timedelta
+sdate = datetime.datetime.strptime("30-08-2021", "%d-%m-%Y")   # start date
+edate = datetime.datetime.strptime("03-09-2021", "%d-%m-%Y")   # end date
+
+delta = edate - sdate       # as timedelta
+
+
+for i in range(delta.days + 1):
+    day = sdate + timedelta(days=i)
+    print(day.strftime("%d-%m-%Y"))
